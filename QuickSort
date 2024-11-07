@@ -1,4 +1,4 @@
-lass Solution {
+class Solution {
   public:
     // Function to sort an array using quick sort algorithm.
     void quickSort(vector<int>& arr, int low, int high) {
@@ -9,6 +9,16 @@ lass Solution {
             quickSort(arr,pivot_index+1,high);
         }
     }
+
+void randomQuickSort(vector<int> &v , int low , int high)
+{
+    if(low<high)
+    {
+        int randomIndex = low + rand() % (high-low+1);
+        swap(v[randomIndex],v[low]);
+        
+    }
+}
 
   public:
 
